@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+.code {
+	position: absolute;
+	height: 100px;
+	top: 500px;
+	bottom: 0;
+	margin:auto;
+	width:30%;
+}
+.centered {
+position: absolute;
+height: 100px;
+top: 0;
+bottom: 0;
+margin:auto;
+}

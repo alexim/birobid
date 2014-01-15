@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:p="http://primefaces.org/ui"
+     xmlns:pe="http://primefaces.org/ui/extensions">
+<!-- xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" -->
+
+<h:head>
+<title>Bienvenido al Sistema</title>
+</h:head>
+<h:body>
+	<h:form id="form">  
+    <p:spacer height="150" />     
+    <p:panel header="Iniciar sesión">  
+        <h:panelGrid columns="2">  
+            <h:outputText value="Usuario: " />  
+            <p:inputText />  
+  
+            <h:outputText value="Clave: " />  
+            <p:password id="feedback" value="#{passwordBean.password2}"  />  
+        </h:panelGrid>  
+        <p:spacer height="30" />  
+        <p:commandButton id="saveButton" value="Ingresar" />
+    </p:panel>  
+</h:form>  
+</h:body>
+</html>

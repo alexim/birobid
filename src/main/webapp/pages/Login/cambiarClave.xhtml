@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:p="http://primefaces.org/ui"
+     xmlns:pe="http://primefaces.org/ui/extensions">
+<!-- xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" -->
+
+<h:head>
+<title>Bienvenido al Sistema</title>
+</h:head>
+<h:body>
+	<h:form id="form"> 
+    <p:panel header="Cambio de clave">  
+        <p:messages id="messages" showDetail="true" autoUpdate="true"/>  
+  
+        <h:panelGrid columns="2" id="matchGrid">                     
+            <h:outputLabel for="pwd1" value="Nueva clave: *" />  
+            <p:password id="pwd1" value="#{passwordBean.password5}" match="pwd2" label="Nueva clave" 
+            			required="true" promptLabel="Nivel de seguridad de la clave" weakLabel="Débil"  
+                        goodLabel="Buena" strongLabel="Excelente" feedback="true" maxlength="20"/>  
+  
+            <h:outputLabel for="pwd2" value="Repetir nueva clave: *" />  
+            <p:password id="pwd2" value="#{passwordBean.password5}" label="Repetir nueva clave"
+            			required="true" promptLabel="Nivel de seguridad de la clave" weakLabel="Débil"  
+                        goodLabel="Buena" strongLabel="Excelente" feedback="true" maxlength="20"/>  
+        </h:panelGrid>  
+  
+        <p:commandButton id="saveButton" update="matchGrid" value="Cambiar" />
+        <p:commandButton id="exitButton" update="matchGrid" value="Salir" />   
+    </p:panel>  
+</h:form>  
+</h:body>
+</html>
