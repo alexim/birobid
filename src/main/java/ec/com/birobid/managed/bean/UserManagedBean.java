@@ -4,14 +4,23 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
  
+
+
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
  
+
+
+
 import org.springframework.dao.DataAccessException;
  
+
+
+
 import ec.com.birobid.model.User;
-import ec.com.birobid.user.service.IUserService;
+import ec.com.birobid.service.impl.IUserService;
 
 /**
  *

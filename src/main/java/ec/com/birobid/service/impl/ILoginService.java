@@ -1,4 +1,4 @@
-package ec.com.birobid.user.service;
+package ec.com.birobid.service.impl;
 
 import java.util.List;
 

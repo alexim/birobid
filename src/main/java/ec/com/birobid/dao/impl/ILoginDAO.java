@@ -1,4 +1,4 @@
-package ec.com.birobid.user.dao;
+package ec.com.birobid.dao.impl;
 
 import java.util.List;
 

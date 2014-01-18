@@ -1,11 +1,14 @@
-package ec.com.birobid.user.service;
+package ec.com.birobid.service;
 
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
  
+
+
+import ec.com.birobid.dao.impl.IUserDAO;
 import ec.com.birobid.model.User;
-import ec.com.birobid.user.dao.IUserDAO;
+import ec.com.birobid.service.impl.IUserService;
  
 /**
  *

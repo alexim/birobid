@@ -52,12 +52,12 @@
     <bean id="User" class="ec.com.birobid.model.User"/>
  
     <!-- User Service Declaration -->
-    <bean id="UserService" class="ec.com.birobid.user.service.UserService">
+    <bean id="UserService" class="ec.com.birobid.service.UserService">
         <property name="userDAO" ref="UserDAO" />
     </bean>
  
     <!-- User DAO Declaration -->
-    <bean id="UserDAO" class="ec.com.birobid.user.dao.UserDAO">
+    <bean id="UserDAO" class="ec.com.birobid.dao.UserDAO">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
  

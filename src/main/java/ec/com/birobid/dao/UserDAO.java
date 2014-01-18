@@ -1,11 +1,9 @@
-package ec.com.birobid.user.dao;
+package ec.com.birobid.dao;
 
 import java.util.List;
 
+import ec.com.birobid.dao.impl.IUserDAO;
 import ec.com.birobid.model.User;
- 
-
-
 import org.hibernate.SessionFactory;
  
 /**

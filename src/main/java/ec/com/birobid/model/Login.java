@@ -19,8 +19,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Login")
 public class Login {
-	private String user;
-	private String password;
+	private String usuario;
+	private String clave;
 	private Date ingreso;
 	private Estado estado = Estado.ACTIVO;
 	
@@ -29,21 +29,28 @@ public class Login {
 		INACTIVO
 	}
 	
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	/**
+	 *  @ManyToOne
+		@JoinColumn(name = "idTutor")
+		@NotNull
+		private Profesor tutor;
+	 */
 	@Id
-    @Column(name="User", unique = true, nullable = false)
-	public String getUser() {
-		return user;
+    @Column(name="Usuario", unique = true, nullable = false)
+	public String getUsuario() {
+		return usuario;
 	}
-	public void setUser(String user) {
-		this.user = user;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
-	@Column(name="Password", nullable = false)
-	public String getPassword() {
-		return password;
+	@Column(name="Clave", nullable = false)
+	public String getClave() {
+		return clave;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setClave(String clave) {
+		this.clave = clave;
 	}
 
 	@Column(name="Ingreso", nullable = false)

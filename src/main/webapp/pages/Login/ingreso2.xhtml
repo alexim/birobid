@@ -9,15 +9,44 @@
 <!-- xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" -->
 <h:head>
 	<title> Inicio de sesión</title>
+	<script type="text/javascript">
+	    function cancelFullScreen(el) {
+	        var requestMethod = el.cancelFullScreen||el.webkitCancelFullScreen||el.mozCancelFullScreen||el.exitFullscreen;
+	        if (requestMethod) { // cancel full screen.
+	            requestMethod.call(el);
+	        } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+	            var wscript = new ActiveXObject("WScript.Shell");
+	            if (wscript !== null) {
+	                wscript.SendKeys("{F11}");
+	            }
+	        }
+	    }
+	    function requestFullScreen(el) {
+	        // Supports most browsers and their versions.
+	        var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen;
+	
+	        if (requestMethod) { // Native full screen.
+	            requestMethod.call(el);
+	        } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+	            var wscript = new ActiveXObject("WScript.Shell");
+	            if (wscript !== null) {
+	                wscript.SendKeys("{F11}");
+	            }
+	        }
+	        return false;
+	    }
+	</script>
 </h:head>
 
-<h:body background="/images/login-fondo.jpg">
-	<p:panel style="height: 650px">
+<h:body>
+	<p:panel style="height: 760px; background-image: url('login-fondo.jpg');">
 			<f:facet name="header">
 				<p:row>
 					<p:column style="width: 100%;">
 						<span class="right">
 							<p:outputLabel value="Sistema Administrativo de Distribución Masiva (ADM)"/>
+							<h:commandButton id="topBtn" onclick="requestFullScreen(document.body); return false;"
+							 image="/images/login-fullscreen.png" style="height: 15px; float:right;" />
 						</span>
 					</p:column>
 				</p:row>
@@ -27,8 +56,9 @@
 			<h:outputLink id="loginLink" value="javascript:void(0)" onclick="dlg.show()" title="Haga clic para iniciar sesión">     
 				<p:graphicImage value="/images/login-icon.png" alt="Iniciar Sesión" />  
 			</h:outputLink>  
+			
 		
-		    <p:growl id="growl" showDetail="true" life="3000" />  
+		    <p:growl id="growl" showDetail="false" life="10000" />  
 		
 		    <p:dialog id="dialog" header="Inicio de sesión" widgetVar="dlg" resizable="false">  
 				<h:panelGrid columns="2" cellpadding="5">  
@@ -49,24 +79,6 @@
 		</h:form>  
 		
 		<script type="text/javascript">  
-		if(document.fullscreenEnabled) {
-		    document.onfullscreenchange = function(event) {
-		        if(document.fullscreenElement) {
-		            
-		        } else {
-		             
-		        }
-		    }
-		 
-		    document.onfullscreenerror = function(event) {
-		       
-		    }
-		 
-		    var fullscreenNode = document.querySelector("#myFullscreenNode");
-		    fullscreenNode.requestFullscreen();
-		}
-		
-		
 			function handleLoginRequest(xhr, status, args) {  
 			    if(args.validationFailed || !args.loggedIn) {  
 			        dlg.jq.effect("shake", { times:5 }, 100);  

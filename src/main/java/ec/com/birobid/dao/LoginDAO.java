@@ -1,9 +1,10 @@
-package ec.com.birobid.user.dao;
+package ec.com.birobid.dao;
 
 import java.util.List;
 
 import org.hibernate.SessionFactory;
 
+import ec.com.birobid.dao.impl.ILoginDAO;
 import ec.com.birobid.model.Login;
 
 public class LoginDAO implements ILoginDAO{

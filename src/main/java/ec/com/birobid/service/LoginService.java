@@ -1,11 +1,12 @@
-package ec.com.birobid.user.service;
+package ec.com.birobid.service;
 
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import ec.com.birobid.dao.impl.ILoginDAO;
 import ec.com.birobid.model.Login;
-import ec.com.birobid.user.dao.ILoginDAO;
+import ec.com.birobid.service.impl.ILoginService;
 
 @Transactional(readOnly = true)
 public class LoginService implements ILoginService {
