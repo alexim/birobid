@@ -29,24 +29,24 @@ public class LoginDAO implements ILoginDAO{
     }
     
     /**
-     * Get User
+     * Get Usuario
      *
-     * @param  int User Id
-     * @return User
+     * @param  int Usuario Id
+     * @return Usuario
      */
     @Override
     public Login getUserByUser(String user) {
         @SuppressWarnings("rawtypes")
 		List list = getSessionFactory().getCurrentSession()
-                                            .createQuery("from Login where User=? and Password =?")
+                                            .createQuery("from Login where Usuario=? and Password =?")
                                             .setParameter(0, user).list();
         return (Login)list.get(0);
     }
  
     /**
-     * Get User List
+     * Get Usuario List
      *
-     * @return List - User list
+     * @return List - Usuario list
      */
     @Override
     public List<Login> getUsers() {

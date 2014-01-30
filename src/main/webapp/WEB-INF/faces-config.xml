@@ -11,17 +11,17 @@ version="2.0">
         </locale-config>  
         <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
     </application>
-
-    <!-- configuration of navigation rules 
+    
+<!--     configuration of navigation rules  -->
     <navigation-rule>
-        <from-view-id>/pages/Login/ingreso.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>success</from-outcome>
-            <to-view-id>/pages/success.xhtml</to-view-id>
-        </navigation-case>
-         <navigation-case>
-            <from-outcome>error</from-outcome>
-            <to-view-id>/pages/error.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>-->
+        <from-view-id>/pages</from-view-id>
+<!--         <navigation-case> -->
+<!--             <from-outcome>success</from-outcome> -->
+<!--             <to-view-id>/pages/success.xhtml</to-view-id> -->
+<!--         </navigation-case> -->
+<!--          <navigation-case> -->
+<!--             <from-outcome>error</from-outcome> -->
+<!--             <to-view-id>/pages/error.xhtml</to-view-id> -->
+<!--         </navigation-case> -->
+    </navigation-rule>
 </faces-config>

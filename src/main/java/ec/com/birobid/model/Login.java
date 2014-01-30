@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import ec.com.birobid.enums.VariablesGlobales.Estado;
+
 /**
 *
 * Login Entity
@@ -23,11 +25,6 @@ public class Login {
 	private String clave;
 	private Date ingreso;
 	private Estado estado = Estado.ACTIVO;
-	
-	public enum Estado {
-		ACTIVO,
-		INACTIVO
-	}
 	
 	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	/**

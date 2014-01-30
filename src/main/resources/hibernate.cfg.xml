@@ -7,9 +7,9 @@
     <session-factory>  
         <property name="hibernate.hbm2ddl.auto">create</property>  
         <property name="hibernate.show_sql">true</property>  
-    <!--  <mapping class="ec.com.birobid.model.Business"/> -->    
-    <!--  <mapping class="ec.com.birobid.model.BranchOffice"/> -->
-        <mapping class="ec.com.birobid.model.User"/>
+    	<mapping class="ec.com.birobid.model.Empresa"/> 
+    	<mapping class="ec.com.birobid.model.Sucursal"/> 
+        <mapping class="ec.com.birobid.model.Usuario"/>
         
         <mapping class="ec.com.birobid.model.Login"/>  
         <mapping resource="hibernate.mapping.xml" />  

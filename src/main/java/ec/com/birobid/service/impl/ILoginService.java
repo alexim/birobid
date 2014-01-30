@@ -6,16 +6,16 @@ import ec.com.birobid.model.Login;
 
 public interface ILoginService {
 	/**
-     * Get User
+     * Get Usuario
      *
-     * @param  int User Id
+     * @param  int Usuario Id
      */
     public Login getByUser(String user);
  
     /**
-     * Get User List
+     * Get Usuario List
      *
-     * @return List - User list
+     * @return List - Usuario list
      */
     public List<Login> getUsers();
 }

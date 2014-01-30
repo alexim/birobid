@@ -10,42 +10,44 @@ import ec.com.birobid.service.impl.ILoginService;
 
 @Transactional(readOnly = true)
 public class LoginService implements ILoginService {
-	ILoginDAO loginDAO;
 	
+	// LoginDAO is injected...
+	ILoginDAO loginDAO;
+
 	 /**
-     * Get User
+     * Get Usuario
      *
-     * @param  int User Id
+     * @param  int Usuario Id
      */
     @Override
     public Login getByUser(String user) {
-        return getUserDAO().getUserByUser(user);
+        return getLoginDAO().getUserByUser(user);
     }
  
     /**
-     * Get User List
+     * Get Usuario List
      *
      */
     @Override
     public List<Login> getUsers() {
-        return getUserDAO().getUsers();
+        return getLoginDAO().getUsers();
     }
     
     /**
-     * Get User DAO
+     * Get Usuario DAO
      *
-     * @return IUserDAO - User DAO
+     * @return IUserDAO - Usuario DAO
      */
-    public ILoginDAO getUserDAO() {
+    public ILoginDAO getLoginDAO() {
         return loginDAO;
     }
     
     /**
-     * Set User DAO
+     * Set Usuario DAO
      *
-     * @param IUserDAO - User DAO
+     * @param IUserDAO - Usuario DAO
      */
-    public void setUserDAO(ILoginDAO loginDAO) {
+    public void setLoginDAO(ILoginDAO loginDAO) {
         this.loginDAO = loginDAO;
     }
 }

@@ -48,8 +48,9 @@
         </property>
     </bean>
  
+ 
     <!-- Beans Declaration -->
-    <bean id="User" class="ec.com.birobid.model.User"/>
+    <bean id="User" class="ec.com.birobid.model.Usuario"/>
  
     <!-- User Service Declaration -->
     <bean id="UserService" class="ec.com.birobid.service.UserService">
@@ -60,7 +61,22 @@
     <bean id="UserDAO" class="ec.com.birobid.dao.UserDAO">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
+ 	
+ 	
+ 	<!-- Beans Declaration -->
+    <bean id="Login" class="ec.com.birobid.model.Login"/>
  
+    <!-- Login Service Declaration -->
+    <bean id="LoginService" class="ec.com.birobid.service.LoginService">
+   		<property name="loginDAO" ref="LoginDAO" />
+    </bean>
+ 
+    <!-- Login DAO Declaration -->
+    <bean id="LoginDAO" class="ec.com.birobid.dao.LoginDAO">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+    
     <tx:annotation-driven />
     <bean id="transactionManager"
         class="org.springframework.orm.hibernate3.HibernateTransactionManager">

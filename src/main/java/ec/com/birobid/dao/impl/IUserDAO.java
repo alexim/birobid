@@ -2,11 +2,11 @@ package ec.com.birobid.dao.impl;
 
 import java.util.List;
 
-import ec.com.birobid.model.User;
+import ec.com.birobid.model.Usuario;
  
 /**
  *
- * User DAO Interface
+ * Usuario DAO Interface
  *
  * @author onlinetechvision.com
  * @since 25 Mar 2012
@@ -16,36 +16,36 @@ import ec.com.birobid.model.User;
 public interface IUserDAO {
  
     /**
-     * Add User
+     * Add Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
-    public void addUser(User user);
+    public void addUser(Usuario usuario);
  
     /**
-     * Update User
+     * Update Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
-    public void updateUser(User user);
+    public void updateUser(Usuario usuario);
  
     /**
-     * Delete User
+     * Delete Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
-    public void deleteUser(User user);
+    public void deleteUser(Usuario usuario);
  
     /**
-     * Get User
+     * Get Usuario
      *
-     * @param  int User Id
+     * @param  int Usuario Id
      */
-    public User getUserById(int id);
+    public Usuario getUserById(int id);
  
     /**
-     * Get User List
+     * Get Usuario List
      *
      */
-    public List<User> getUsers();
+    public List<Usuario> getUsers();
 }

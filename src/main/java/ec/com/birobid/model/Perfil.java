@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 /**
 *
-* User Entity
+* Usuario Entity
 *
 * @author Alexi Mendoza
 * @since 28 Dic 2013

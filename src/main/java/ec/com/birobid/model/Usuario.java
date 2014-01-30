@@ -8,7 +8,7 @@ import javax.persistence.Table;
  
 /**
  *
- * User Entity
+ * Usuario Entity
  *
  * @author Alexi Mendoza
  * @since 28 Dic 2013
@@ -16,17 +16,17 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="User")
-public class User {
+@Table(name="Usuario")
+public class Usuario {
 
     private int id;
     private String name;
     private String surname;
 	
     /**
-     * Get User Id
+     * Get Usuario Id
      *
-     * @return int - User Id
+     * @return int - Usuario Id
      */
     @Id
     @Column(name="Id", unique = true, nullable = false)
@@ -35,18 +35,18 @@ public class User {
     }
  
     /**
-     * Set User Id
+     * Set Usuario Id
      *
-     * @param int - User Id
+     * @param int - Usuario Id
      */
     public void setId(int id) {
         this.id = id;
     }
  
     /**
-     * Get User Name
+     * Get Usuario Name
      *
-     * @return String - User Name
+     * @return String - Usuario Name
      */
     @Column(name="Name", unique = true, nullable = false)
     public String getName() {
@@ -54,18 +54,18 @@ public class User {
     }
  
     /**
-     * Set User Name
+     * Set Usuario Name
      *
-     * @param String - User Name
+     * @param String - Usuario Name
      */
     public void setName(String name) {
         this.name = name;
     }
  
     /**
-     * Get User Surname
+     * Get Usuario Surname
      *
-     * @return String - User Surname
+     * @return String - Usuario Surname
      */
     @Column(name="Surname", unique = true, nullable = false)
     public String getSurname() {
@@ -73,9 +73,9 @@ public class User {
     }
  
     /**
-     * Set User Surname
+     * Set Usuario Surname
      *
-     * @param String - User Surname
+     * @param String - Usuario Surname
      */
     public void setSurname(String surname) {
         this.surname = surname;

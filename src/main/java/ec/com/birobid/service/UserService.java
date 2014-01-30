@@ -3,16 +3,14 @@ package ec.com.birobid.service;
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
- 
-
 
 import ec.com.birobid.dao.impl.IUserDAO;
-import ec.com.birobid.model.User;
+import ec.com.birobid.model.Usuario;
 import ec.com.birobid.service.impl.IUserService;
  
 /**
  *
- * User Service
+ * Usuario Service
  *
  * @author onlinetechvision.com
  * @since 25 Mar 2012
@@ -26,70 +24,70 @@ public class UserService implements IUserService {
     IUserDAO userDAO;
  
     /**
-     * Add User
+     * Add Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
     @Transactional(readOnly = false)
     @Override
-    public void addUser(User user) {
-        getUserDAO().addUser(user);
+    public void addUser(Usuario usuario) {
+        getUserDAO().addUser(usuario);
     }
  
     /**
-     * Delete User
+     * Delete Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
     @Transactional(readOnly = false)
     @Override
-    public void deleteUser(User user) {
-        getUserDAO().deleteUser(user);
+    public void deleteUser(Usuario usuario) {
+        getUserDAO().deleteUser(usuario);
     }
  
     /**
-     * Update User
+     * Update Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
     @Transactional(readOnly = false)
     @Override
-    public void updateUser(User user) {
-        getUserDAO().updateUser(user);
+    public void updateUser(Usuario usuario) {
+        getUserDAO().updateUser(usuario);
     }
  
     /**
-     * Get User
+     * Get Usuario
      *
-     * @param  int User Id
+     * @param  int Usuario Id
      */
     @Override
-    public User getUserById(int id) {
+    public Usuario getUserById(int id) {
         return getUserDAO().getUserById(id);
     }
  
     /**
-     * Get User List
+     * Get Usuario List
      *
      */
     @Override
-    public List<User> getUsers() {
+    public List<Usuario> getUsers() {
         return getUserDAO().getUsers();
     }
  
     /**
-     * Get User DAO
+     * Get Usuario DAO
      *
-     * @return IUserDAO - User DAO
+     * @return IUserDAO - Usuario DAO
      */
     public IUserDAO getUserDAO() {
         return userDAO;
     }
  
     /**
-     * Set User DAO
+     * Set Usuario DAO
      *
-     * @param IUserDAO - User DAO
+     * @param IUserDAO - Usuario DAO
      */
     public void setUserDAO(IUserDAO userDAO) {
         this.userDAO = userDAO;

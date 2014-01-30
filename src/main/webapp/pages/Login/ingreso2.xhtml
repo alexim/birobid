@@ -2,10 +2,10 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-     xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-     xmlns:p="http://primefaces.org/ui"
-     xmlns:pe="http://primefaces.org/ui/extensions">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pe="http://primefaces.org/ui/extensions">
 <!-- xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" -->
 <h:head>
 	<title> Inicio de sesión</title>
@@ -61,7 +61,17 @@
 		    <p:growl id="growl" showDetail="false" life="10000" />  
 		
 		    <p:dialog id="dialog" header="Inicio de sesión" widgetVar="dlg" resizable="false">  
-				<h:panelGrid columns="2" cellpadding="5">  
+				<h:panelGrid columns="2" cellpadding="5"> 
+					<h:outputLabel for="empresa" value="Empresa: " />  
+					<p:selectOneMenu id="empresa" value="Birobid">  
+			            <f:selectItems value="Birobid" />  
+			        </p:selectOneMenu>   
+			        
+			        <h:outputLabel for="sucursal" value="Sucursal: " />  
+			        <p:selectOneMenu id="sucursal" value="Sucursal">  
+			            <f:selectItems value="Matriz" />  
+			        </p:selectOneMenu> 
+			        
 					<h:outputLabel for="username" value="Usuario: " />  
 					<p:inputText value="#{loginBean.user}"   
 					        	 id="username" required="true" label="username" />  
@@ -76,6 +86,22 @@
 					</f:facet>  
 				</h:panelGrid>  
 		    </p:dialog>  
+		    
+		    <br />
+		    <h:outputLabel style="color:white;"> <br /> <br />
+		   		Acerca del Sistema... <br /> <br />
+		    	JSF 2.2.4 Mojarra  <br />
+				Spring Framework 3.2  <br />
+				Hibernate 3  <br /> 
+				Apache Maven 3.1  <br />
+				PrimeFaces 4.0  <br /> 
+				Git  <br />
+				Java JDK 7 update 45  <br />
+				Apache Tomcat 7.0.41  <br />
+				MySQL 5.6  <br />
+				Workbench 6.0 CE  <br />
+				SpringToolsSuite (STS) 3.4.0 Release
+			</h:outputLabel>
 		</h:form>  
 		
 		<script type="text/javascript">  
@@ -86,6 +112,7 @@
 			    else {  
 			        dlg.hide();  
 			        $('#loginLink').fadeOut();  
+			        setTimeout(function(){location.href="principal.jsf", 1000} ); 
 			    }  
 			}  
 		</script> 

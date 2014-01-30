@@ -5,13 +5,15 @@ import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 
 import org.primefaces.context.RequestContext;
 
 import ec.com.birobid.model.Login;
-import ec.com.birobid.model.Login.Estado;
+import ec.com.birobid.service.impl.ILoginService;
+import ec.com.birobid.enums.VariablesGlobales.Estado;
 
 /**
  *
@@ -26,13 +28,9 @@ public class LoginBean implements Serializable{
 	 */
 	private static final long serialVersionUID = -7883301876834795924L;
 	
-	/**
-	 * 
-	 	Spring Login Service is injected...
-		@ManagedProperty(value="#{LoginService}")
-	    ILoginService loginService;
-	 * 
-	 * */
+ 	//Spring Login Service is injected...
+	//@ManagedProperty(value="#{LoginService}")
+    ILoginService loginService;
 	
     List<Login> loginList;
     

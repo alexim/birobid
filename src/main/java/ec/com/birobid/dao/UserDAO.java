@@ -3,12 +3,12 @@ package ec.com.birobid.dao;
 import java.util.List;
 
 import ec.com.birobid.dao.impl.IUserDAO;
-import ec.com.birobid.model.User;
+import ec.com.birobid.model.Usuario;
 import org.hibernate.SessionFactory;
  
 /**
  *
- * User DAO
+ * Usuario DAO
  *
  * @author onlinetechvision.com
  * @since 25 Mar 2012
@@ -39,59 +39,59 @@ public class UserDAO implements IUserDAO {
     }
  
     /**
-     * Add User
+     * Add Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
     @Override
-    public void addUser(User user) {
-        getSessionFactory().getCurrentSession().save(user);
+    public void addUser(Usuario usuario) {
+        getSessionFactory().getCurrentSession().save(usuario);
     }
  
     /**
-     * Delete User
+     * Delete Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
     @Override
-    public void deleteUser(User user) {
-        getSessionFactory().getCurrentSession().delete(user);
+    public void deleteUser(Usuario usuario) {
+        getSessionFactory().getCurrentSession().delete(usuario);
     }
  
     /**
-     * Update User
+     * Update Usuario
      *
-     * @param  User user
+     * @param  Usuario user
      */
     @Override
-    public void updateUser(User user) {
-        getSessionFactory().getCurrentSession().update(user);
+    public void updateUser(Usuario usuario) {
+        getSessionFactory().getCurrentSession().update(usuario);
     }
  
     /**
-     * Get User
+     * Get Usuario
      *
-     * @param  int User Id
-     * @return User
+     * @param  int Usuario Id
+     * @return Usuario
      */
     @Override
-    public User getUserById(int id) {
+    public Usuario getUserById(int id) {
         @SuppressWarnings("rawtypes")
 		List list = getSessionFactory().getCurrentSession()
-                                            .createQuery("from User where id=?")
+                                            .createQuery("from Usuario where id=?")
                                             .setParameter(0, id).list();
-        return (User)list.get(0);
+        return (Usuario)list.get(0);
     }
  
     /**
-     * Get User List
+     * Get Usuario List
      *
-     * @return List - User list
+     * @return List - Usuario list
      */
     @Override
-    public List<User> getUsers() {
+    public List<Usuario> getUsers() {
         @SuppressWarnings("unchecked")
-		List<User> list = getSessionFactory().getCurrentSession().createQuery("from User").list();
+		List<Usuario> list = getSessionFactory().getCurrentSession().createQuery("from Usuario").list();
         return list;
     }
  
